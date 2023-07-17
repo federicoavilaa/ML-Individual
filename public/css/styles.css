@@ -68,7 +68,7 @@ body header {
 }
 
 .secciones b {
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -161,10 +161,6 @@ footer .fa-solid {
     color: #1259c3;
 }
 
-footer .fa-solid:hover {
-    color: #03264C;
-}
-
 input:invalid {
     border: red;
     border-color: red;
@@ -217,7 +213,7 @@ body main .articles-container {
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
-    margin: 35px 0;
+    margin: 34px 0;
 }
 
 .content-article {
@@ -227,10 +223,9 @@ body main .articles-container {
     background-color: white;
     position: relative;
     margin: 10px;
-    gap: 3px;
     flex-direction: column;
     display: flex;
-    transition: 70ms;
+    transition: 95ms;
 }
 
 .content-article i {
