@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro Desafio</title>
+  <link href="/css/styles.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f2c1799cf6.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="login-body">
+  <header>
+
+    <section class="headerTopBar">
+
+      <div class="logoContainer">
+        <img src="/img/logo-mercado-liebre.svg" class="logo" alt="logo-mercado liebre" />
+
+        <section class="searchContainer">
+          <input type="search" placeholder="Buscar productos, marcas" />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>
+      </div>
+
+      <section class="textHeader">
+        <i class="fa-solid fa-hand-holding-dollar"><span>Compra en cuotas y sin tarjeta de credito</span></i>
+      </section>
+
+    </section>
+
+    <nav class="container-navbar">
+
+      <ul class="navbar-top">
+        <a href="#">
+          <li>Ofertas</li>
+        </a>
+        <a href="#">
+          <li>Tiendas oficiales</li>
+        </a>
+        <a href="#">
+          <li>Vender</li>
+        </a>
+        <a href="#">
+          <li>Ayuda</li>
+        </a>
+      </ul>
+
+      <ul class="navbar-bottom">
+        <a href="http://localhost:3000/registro">
+          <li>Crea tu cuenta</li>
+        </a>
+        <a href="http://localhost:3000/login">
+          <li class="cuerpo">Ingresa<i class="fa-solid fa-right-to-bracket"></i></li>
+        </a>
+        <a href="#">
+          <li class="cuerpo">Compras<i class="fa-solid fa-basket-shopping"></i></li>
+        </a>
+      </ul>
+
+    </nav>
+
+    <nav class="burger-menu">
+      <i class="fas fa-bars"></i>
+    </nav>
+
+  </header>
+
+
+  <main class="main-registro-container">
+    <div class="card-registro">
+      <h1>Registro</h1>
+      <form class="form-container-register" action="http://localhost:3000">
+        <div class="wrapper-input">
+          <input class="input" type="text" name="Name" placeholder="Nombre y apellido" required>
+        </div>
+        <div class="wrapper-input">
+          <input class="input" type="password" name="User" placeholder="Nombre de usuari@" required>
+        </div>
+        <div class="wrapper-input">
+          <input class="input" type="password" name="Email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un email válido">
+        </div>
+        <div class="wrapper-input">
+          <label class="label-registro">Fecha de nacimiento</label>
+          <input class="input" type="date" name="Date">
+        </div>
+        <div class="wrapper-input">
+          <input class="input" type="password" name="Home" placeholder="Domicilio">
+        </div>
+        <div class="wrapper-input">
+          <label class="label-registro">Perfil del usuario</label>
+          <div class="input-radio">
+            <input type="radio" name="Buyer">
+            <label>Comprador</label>
+            <input type="radio" name="Seller">
+            <label>Vendedor</label>
+          </div>
+        </div>
+        <div class="wrapper-input">
+          <label for="" class="label-registro">Intereses</label>
+          <section class="wrapper-checkbox">
+            <input type="checkbox" name="Electro" id="opcion1">
+            <label for="opcion1">Electro</label>
+          </section>
+          <section class="wrapper-checkbox">
+            <input type="checkbox" name="Moda" id="opcion2">
+            <label for="opcion2">Moda</label>
+          </section>
+          <section class="wrapper-checkbox">
+            <input type="checkbox" name="Hogar" id="opcion3">
+            <label for="opcion3">Hogar</label>
+          </section>
+          <section class="wrapper-checkbox">
+            <input type="checkbox" name="Jug" id="opcion4">
+            <label for="opcion4">Juguetería</label>
+          </section>
+          <section class="wrapper-checkbox">
+            <input type="checkbox" name="Vsana" id="opcion5">
+            <label for="opcion5">Vida sana</label>
+          </section>
+        </div>
+        <div class="wrapper-input">
+          <label class="label-file" for="img-user">Sube una foto de perfil</label>
+          <input type="file" id="img-user" name="img-user" accept="image/*">
+        </div>
+        <div class="wrapper-input">
+          <label class="label-registro">Contraseña:</label>
+          <input class="input" type="password" name="passw" placeholder="Ingresa contraseña">
+        </div>
+        <div class="wrapper-input">
+          <input class="input" type="password" name="checkPassw" placeholder="Confirma contraseña">
+        </div>
+        <div class="buttons">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+        </div>
+      </form>
+      
+    </div>
+  </main>
+</body>
+
+</html>

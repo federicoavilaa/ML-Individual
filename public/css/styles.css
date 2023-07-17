@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+body header {
+    background-color: #eac926;
+    height: auto;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+}
+
+.logoContainer .logo {
+    width: 50%;
+    padding: 10px;
+}
+
+.logoContainer .searchContainer {
+    width: 50vw;
+    padding: 10px;
+}
+
+.searchContainer input {
+    height: 30px;
+    width: 90%;
+    border: none;
+    position: relative;
+    outline: none;
+}
+
+.searchContainer button {
+    position: absolute;
+    width: 5%;
+    height: 30px;
+    border: none;
+    background-color: white;
+}
+
+.searchContainer input::placeholder {
+    padding: 5px;
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.searchContainer button .fa-solid {
+    font-size: 10px;
+}
+
+.secciones {
+    font-size: 1.25rem;
+    margin: 20 0px;
+    padding: 0 35px;
+    color: #666;
+    width: 100%;
+}
+
+.secciones b {
+    text-align: left;
+}
+
+
+/* texto articulos */
+
+.articles-container .descripcion {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    margin: 5px 0 0 0;
+    display: none;
+}
+
+.cuerpoText {
+    font-size: 12px;
+}
+
+
+/* navbar */
+
+.container-navbar {
+    display: none;
+}
+
+.navbar-bottom a,
+.navbar-top a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 12px;
+    color: black;
+}
+
+.burger-menu {
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menu .fas {
+    background-color: #1259c3;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* footer */
+
+.copyright {
+    text-align: left;
+    font-size: 12px;
+}
+
+.textHeader {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.textHeader i span {
+    font-size: 0.688rem;
+    padding: 0 0 0 5px;
+    font-weight: normal;
+}
+
+.textHeader .fa-solid {
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    background-color: white;
+    padding-top: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .fa-solid {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+footer .fa-solid:hover {
+    color: #03264C;
+}
+
+input:invalid {
+    border: red;
+    border-color: red;
+  }
+  
+input:invalid:after {
+    content: "El formato no es válido.";
+    color: red;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+
+/* precios y descuentos */
+
+section .detalle {
+    display: flex;
+    align-items: center;
+}
+
+.detalle .precios {
+    font-size: 0.80rem;
+    width: 30%;
+    font-weight: 900;
+}
+
+.detalle .descuentos {
+    font-size: 0.75rem;
+    color: #39b54a;
+    width: 70%;
+    padding: 0 0 0 10px;
+}
+
+/* body */
+
+body main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 0 0;
+}
+
+body main .articles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+
+.content-article {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    width: 80%;
+    background-color: white;
+    position: relative;
+    margin: 10px;
+    gap: 3px;
+    flex-direction: column;
+    display: flex;
+    transition: 70ms;
+}
+
+.content-article i {
+    display: block;
+    font-size: 13px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 9%;
+    color: #39b54a;
+    transition: transform 0.5s;
+}
+
+.content-article i:hover {
+    transform: rotate(-90deg);
+}
+
+.content-article img {
+    width: 100%;
+    border-bottom: solid 1.5px #ebebeb;
+    height: auto;
+}
+
+.content-article:hover{
+    box-shadow: 2px 2px 20px #393939;
+}
+
+/* tablet */
+
+@media (min-width: 361px) {
+
+/* articulos */
+
+body main .articles-container {
+    flex-direction: row;
+}
+
+.content-article {
+    width: 44%;
+}
+
+/* icono envio */
+
+.content-article i {
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    bottom: 24%;
+    right: 2%;
+}
+
+/* descripcion */
+
+.detalle .precios {
+    font-size: 0.75rem;
+    width: 40%;
+}
+
+.detalle .descuentos {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0 0 0 0;
+    align-self: flex-start;
+    width: 60%;
+}
+
+.articles-container .descripcion {
+    font-size: 0.688rem;
+}
+
+.secciones {
+    padding: 0 4%;
+}
+
+.articles-container .descripcion {
+    display: block;
+    opacity: 0;
+}
+
+.articles-container .descripcion:hover {
+    opacity: 0.9;
+}
+}
+
+
+
+@media (min-width: 505px) {
+
+/*navbar*/
+
+.headerTopBar {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.container-navbar {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 10px 15px 10px;
+    width: 100%;
+}
+
+.navbar-top,
+.navbar-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar-top li i,
+.navbar-bottom li i {
+    margin: 0 5px;
+}
+
+.navbar-top li,
+.navbar-bottom li {
+    margin: 0 0 0 15px;
+    font-size: 10px;
+}
+
+
+.container-navbar {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.textHeader {
+    width: 35%;
+}
+
+
+.logoContainer .logo {
+    width: 50%;
+    margin: 10px;
+}
+
+.logoContainer {
+    width: 70%;
+}
+
+
+.logoContainer .searchContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.searchContainer input {
+    height: 30px;
+    width: 85%;
+    border: none;
+}
+
+.searchContainer button {
+    position: relative;
+    width: 10%;
+    height: 30px;
+    background-color: white;
+}
+}
+
+
+/* tablet mas grande*/
+
+@media (min-width: 400px) {
+    .content-article i {
+        bottom: 20%;
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+    }
+}
+
+
+
+/*tablet mas grande*/
+
+@media (min-width: 523px) {
+    .articles-container .descripcion {
+        font-size: 0.87rem;
+    }
+
+    .detalle .precios {
+        font-size: 1rem;
+    }
+
+    .detalle .descuentos {
+        font-size: 0.87rem;
+    }
+
+    .content-article i {
+        bottom: 20%;
+    }
+}
+
+
+@media (min-width: 586px) {
+
+    .navbar-top li,
+    .navbar-bottom li {
+
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (min-width: 602px) {
+    .content-article i {
+        bottom: 18%;
+    }
+}
+
+/*laptop*/
+
+@media (min-width: 769px) {
+
+    .secciones {
+        padding: 0 2%;
+    }
+
+    .content-article {
+        width: 22.3%;
+    }
+
+
+    .detalle .precios {
+        font-size: 0.75rem;
+    }
+
+    .detalle .descuentos {
+        font-size: 0.75rem;
+    }
+
+    .articles-container .descripcion {
+        font-size: 0.625rem;
+    }
+
+    .content-article i {
+        bottom: 20%;
+        right: 3%;
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    /* register */
+
+    .main-registro-container .card-registro {
+        width: 40vw;
+    }
+
+    .wrapper-input .input-radio {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .wrapper-input .input-radio label {
+        margin: 0;
+        width: 40%;
+    }
+
+    .wrapper-input .input-radio input {
+        margin: 0 20px 0 0;
+        width: auto;
+    }
+
+    .main-login-container .card-login {
+        width: 40vw;
+    }
+
+    .footer-container {
+        display: flex;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ul {
+        width: 100%
+    }
+}
+
+
+@media (min-width: 909px) {
+
+    .articles-container .descripcion {
+        font-size: 0.75rem;
+    }
+
+    .detalle .precios {
+        font-size: 0.875rem;
+    }
+
+    .detalle .descuentos {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (min-width: 1084px) {
+    .content-article i {
+        bottom: 18%;
+    }
+    .textHeader .fa-solid {
+        font-size: 17px;
+    }
+    .secciones {
+        padding: 0 3%;
+    }
+}
+
+
+
+@media (min-width: 1300px) {
+    .secciones {
+        padding: 0 3.5%;
+    }
+    .content-article i {
+        bottom: 15%;
+    }
+    .headerTopBar .logoContainer img {
+        width: 400px;
+    }
+    .textHeader i span {
+        font-size: 1rem;
+    }
+    .articles-container .descripcion {
+        font-size: 1rem;
+        padding: 10px 0 0 0;
+    }
+    .detalle .precios {
+        font-size: 1.125rem;
+    }
+    .detalle .descuentos {
+        font-size: 1rem;
+    }
+}
+
+/* log in */
+
+
+.main-login-container {
+    height: auto;
+}
+
+.main-login-container h1 {
+    padding: 30px 0 0 0;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card-login {
+    background-color: #ebebeb;
+    width: 80vw;
+    height: 70vh;
+    border-radius: 20px;
+    margin: 100px 0;
+    padding: 20px;
+    box-shadow: 2px 2px 20px #393939;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px 50px 10px;
+    height: 100%;
+}
+
+.form-container label {
+    margin: 20px 0 20px 0;
+    font-weight: 800;
+}
+
+.form-container input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.form-container input::placeholder {
+    padding: 0 10px;
+    font-weight: 100;
+}
+
+
+.form-container input:focus {
+    padding: 10px;
+}
+
+.form-container button {
+    height: 38px;
+    background-color: #1259c3;
+    color: white;
+    font-weight: 800;
+    margin: 50px 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgb(142, 142, 142);
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+
+    box-shadow: 2px 2px 10px #0022AA;
+}
+
+#login-body {
+    background-color: white;
+}
+
+/* register */
+
+.card-registro {
+    height: 100%;
+    width: 80vw;
+    margin: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 50px #414141;
+    background-color: #ebebeb;
+}
+
+.form-container-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+
+.wrapper-input {
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label-registro {
+    margin: 0 0 20px 0px;
+}
+
+
+.wrapper-input .input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+
+.wrapper-input .input:focus {
+    padding: 0 0 0 5px;
+}
+
+.wrapper-input input::placeholder {
+    padding: 0 5px;
+    font-style: italic;
+}
+
+.input-radio {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.input-radio input,
+.input-radio label {
+    margin: 10px 0;
+    width: 20%;
+}
+
+.wrapper-checkbox {
+    display: flex;
+    margin: 20px 0;
+}
+
+.wrapper-checkbox label {
+    margin: 0 0 0 10px;
+}
+
+
+.form-container-register button {
+    border: none;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 5px;
+    font-weight: 800;
+    width: 40%;
+    height: 20%;
+    padding: 10px 0;
+    box-shadow: 2px 2px 20px #8a8a8a;
+}
+
+.form-container-register button:hover {
+    box-shadow: 2px 2px 20px #0022AA;
+}
+
+.form-container-register .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.label-registro {
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-input input[type="file"] {
+    display: none;
+}
+
+.wrapper-input .label-file {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #eaeaea;
+    color: #333;
+    border: 1px solid #989898;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 45%;
+    font-style: italic;
+    font-weight: 500;
+    box-shadow: 2px 2px 10px #5b5b5b;
+}
